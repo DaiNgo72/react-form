@@ -10,9 +10,12 @@ import "./config/style/modern-normalize.css";
 import "./config/style/tailwind.css";
 import "./config/style/font-family.css";
 import "./config/style/main.css";
+import { Provider } from "./store/store";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Provider>
+      <RouterProvider router={router} />
+    </Provider>
   </React.StrictMode>,
 );
